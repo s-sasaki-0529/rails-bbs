@@ -1,0 +1,7 @@
+<h1>トピック一覧</h1>
+<ul>
+  <% @topics.each do |topic| %>
+    <li><%= link_to topic.title, topics_show_path(topic.id) %></li>
+  <% end %>
+</ul>
+
