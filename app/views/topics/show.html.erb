@@ -1,2 +1,6 @@
-<h1>Topics#show</h1>
-<p>Find me in app/views/topics/show.html.erb</p>
+<h1><%= @topic.title %></h1>
+<% @posts.each_with_index do |post , idx| %>
+  <p>
+    <%= idx + 1 %>. <%= post.name %> : <%= post.body %>
+  </p>
+<% end %>
